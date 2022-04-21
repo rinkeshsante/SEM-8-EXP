@@ -1,13 +1,12 @@
 import socket
-import sys
 from _thread import start_new_thread
+Port = 6000
 
 
 class Myclient:
     def __init__(self) -> None:
         self.client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        print(sys.argv[0])
-        Port = int(sys.argv[1])
+        # print(sys.argv[0])
         self.client.connect(("localhost", Port))
 
     def listen(self):
