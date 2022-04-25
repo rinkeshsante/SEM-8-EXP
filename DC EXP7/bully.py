@@ -18,7 +18,7 @@ def Bulley(initiator):
 for i in range(n):
     print(f"For Process {i+1}:")
     status.append(int(input("Status: ")))
-    priority.append(int(input("Priority: ")))
+    priority.append(i+1)
 initiator = int(input("Which process will initiate election? "))
 Bulley(initiator)
 print(f"Final coordinator: {coordinator}")
